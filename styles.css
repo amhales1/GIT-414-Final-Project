@@ -115,10 +115,8 @@ main{
     min-width:320px;
     display:grid;
     grid-template-areas:
-    "five"
-    "six" 
-    "seven"
-    "eight";
+    "five six" 
+    "seven eight";
     }
     #five {
     grid-area:five;
@@ -152,14 +150,12 @@ footer {
 }
 
 /* ----- IMAGES ----- */
-/*img{
-    display: block;
-    max-width: 100%;
+*img{
+    max-width: 1920px;
     margin: 0.5em 0;
 }
-*/
 
-/* ----- Site Sectioning ----- */
+/* ----- Site Sections ----- */
 h2 ~ p {
     text-align: center;
 }
@@ -168,16 +164,24 @@ p {
     font-weight: 300;
     font-size: 1em;
 }
+.standout {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
 #about {
-    height: 550px;
-    background-color:var(--teal);
+    height: 800px;
+    width: "100% 100%";
     padding-top: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/hero.jpg);
 }
 #about ~ p {
     font-weight: 700;
 }
 #bookSection {
-    height: 800px;
+    height: 875px;
     background-color:var(--apple);
     text-align: center;
     padding-top: 100px;
@@ -187,36 +191,61 @@ p {
     background-color:var(--apple);
 }
 #eventSection {
-    height: 800px;
+    height: 875px;
     background-color: var(--beige);
     padding-top: 100px;
 }
-.standout {
-    font-size: 30px;
-    font-weight: bold;
+#eventSelection ~ h3 {
     padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
 }
-#events {
+#eventSelection{
     background-color: var(--beige);
+    text-align: center;
+}
+#events ~ p {
+    font-size: 20px;
+    padding-bottom: 20px;
 }
 #newsletterForm {
-    height: 400px;
+    height: 450px;
     background-color:var(--orange);
     text-align: center;
     padding-top: 100px;
 }
 footer {
+    height: 600px;
     padding-top: 50px;
 }
-
 #socialMedia {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+#socialMedia li{
+    display: inline-block;
+}
+#contentLists {
+    padding-top: 20px;
+    padding-bottom:20px;
+    text-align: center;
+    font-size: 24px;
 }
 small{
-    font-size: 12px;
+    font-size: 20px;
     margin: 0.25em;
     padding: 0.25em;
+}
+#termsOfService {
+    text-align: center;
+    padding-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(black)
+}
+a:hover {
+    color: var(white)
 }
 
 /*--------- Small Size Menu ---------*/
@@ -264,7 +293,7 @@ small{
 .menu li a:hover:after {width: 100%;}
 .open-menu , .close-menu {
     position: absolute;
-    color: var(--white);
+    color: var(--black);
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
@@ -290,7 +319,7 @@ small{
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color: var(--teal);
+        background-color: var(--white);
         transition: all 0.2s ease-in-out;
     }
     .menu li {margin-top: 40px;}
