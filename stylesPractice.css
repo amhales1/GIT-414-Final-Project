@@ -1,0 +1,428 @@
+/* This is the StyleSheet for GIT 414 Final Project */
+/*Author: Alex Hales */
+
+/* --------------- ADD CSS RESET TO THE FILE HERE --------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- COLOR VARIABLES ---------- */
+:root{
+    --apple: #D74452;
+    --teal: #2D838D;
+    --beige: #DAD3B7;
+    --orange: #DB9F34;
+    --darkOrange: #DB8E36;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+h1{
+    visibility: hidden;
+    height: 0px;
+}
+h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+/* ----- MAIN/HEADER/FOOTER ----- */
+main, header, footer{
+    font-family: sans-serif;
+    color: var(--black);
+    width: 100%;
+}
+main{
+    max-width: 100%;
+    margin: 0 auto;
+}
+#books {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "one"
+    "two" 
+    "three"
+    "four"
+    }
+    #one {
+    grid-area: one;
+    }
+    #two {
+    grid-area: two;
+    }
+    #three {
+    grid-area:three;
+    }
+    #four {
+    grid-area:four;
+    }
+#events {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "five six" 
+    "seven eight";
+    }
+    #five {
+    grid-area:five;
+    }
+    #six {
+    grid-area:six;
+    }
+    #seven {
+    grid-area:seven;
+    }
+    #eight {
+    grid-area:eight;
+    }
+footer {
+    display:grid;
+    grid-template-areas: 
+    "footerHead"
+    "contentLists"
+    "footerCopy";
+}
+#contentLists {
+    display: grid;
+    grid-template-areas: 
+    "footerBooks footerEvents";
+}
+.space {
+    padding-top: 5px;
+    width: 40px;
+    height: 2px;
+    color: white;
+}
+
+/* ----- IMAGES ----- */
+*img{
+    max-width: 1920px;
+    margin: 0.5em 0;
+}
+
+/* ----- Site Sections ----- */
+h2 ~ p {
+    text-align: center;
+}
+p {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1em;
+}
+.standout {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+#about {
+    height: 800px;
+    width: "100% 100%";
+    padding-top: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/hero.jpg);
+}
+#about ~ p {
+    font-weight: 700;
+}
+#bookSection {
+    height: 875px;
+    background-color:var(--apple);
+    text-align: center;
+    padding-top: 100px;
+}
+#books {
+    margin-top: 20px;
+    background-color:var(--apple);
+}
+#eventSection {
+    height: 875px;
+    background-color: var(--beige);
+    padding-top: 100px;
+}
+#eventSelection ~ h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+#eventSelection{
+    background-color: var(--beige);
+    text-align: center;
+}
+#events ~ p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+#newsletterForm {
+    height: 450px;
+    background-color:var(--orange);
+    text-align: center;
+    padding-top: 100px;
+}
+footer {
+    height: 600px;
+    padding-top: 50px;
+}
+#socialMedia {
+    text-align: center;
+}
+#socialMedia li{
+    display: inline-block;
+}
+#contentLists {
+    padding-top: 20px;
+    padding-bottom:20px;
+    text-align: center;
+    font-size: 24px;
+}
+small{
+    font-size: 20px;
+    margin: 0.25em;
+    padding: 0.25em;
+}
+#termsOfService {
+    text-align: center;
+    padding-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(black)
+}
+a:hover {
+    color: var(white)
+}
+
+/*--------- Small Size Menu ---------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--teal);
+    padding: 12px 20px;
+}
+.titleName {
+    font-size: 2em;
+    text-decoration: none;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 900px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--white);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+/*--------- End Small Size Menu ----------- */
+
+/* ---------- SMALL SCREEN STYLES ---------- */
+@media screen and (min-width: 320px) {
+    header, footer{
+    background-color: var(--teal);
+    color: var(black);
+    }
+    .titleName {
+        font-size: 3em;
+        text-decoration: none;
+    }
+    #books {
+        grid-template-areas:
+        "one"
+        "two" 
+        "three"
+        "four";
+    }
+    #events {
+        grid-template-areas:
+        "five"
+        "six" 
+        "seven"
+        "eight";
+    }
+    footer {
+        grid-template-areas:
+        "footerHead"
+        "socialMedia"
+        "contentLists"
+        "footerBooks footerEvents"
+        "termsOfService"
+        "copyright";
+    }
+    img{
+        width: 200px;
+        max-width: 200px;
+    } 
+}
+/* --------------- END SMALL SCREEN SIZES --------------- */
+
+/* ---------- MEDIUM SCREEN STYLES ---------- */
+@media screen and (min-width: 900px) {
+    
+    
+    h2{
+        font-size: 3em;
+        text-align: center;
+    }
+    #books {
+        grid-template-areas:
+        "one two"
+        "three four";
+    }
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight";
+    }
+    footer {
+        grid-template-areas:
+        "footerHead contentLists"
+        "copyright termsOfService";
+    }
+
+}
+/* --------------- END MEDIUM SCREEN SIZES --------------- */
+
+/* ---------- LARGE SCREEN STYLES ---------- */
+@media screen and (min-width: 1280px) {
+    h2{
+        font-size: 5em;
+    }
+    #books{
+        grid-template-areas:
+        "one two three four"
+      } 
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight"
+    }
+    footer {
+        grid-template-areas:
+        "footerHead contentLists footerCopy";
+    }
+}
+/* --------------- END LARGE SCREEN SIZES --------------- */
+
+
+
+/* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
+/* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
+    img{
+        width: 300px;
+        max-width: 300px;
+    } 
+/* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
