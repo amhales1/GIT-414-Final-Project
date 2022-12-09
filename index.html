@@ -8,16 +8,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
             <h1>Claire Sinagra</h1>
             <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#bookSection">Books</a></li>
-                <li><a href="#eventSection">Events</a></li>
-            </ul>
+                <ul class="nav-bar">
+                    <li class="titleName"><a href="#">Claire Sinagra</a></li>
+                    <input type="checkbox" id="check" />
+                    <span class="menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#bookSection">Books</a></li>
+                        <li><a href="#eventSection">Events</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
             </nav>
         </header>
 
@@ -172,6 +181,7 @@
     <section id="contentLists">
     <div id="footerBooks">
         <h3>Books</h3>
+        <div class="space"></div>
         <ul>
             <li>Book1</li>
             <li>Book1</li>
@@ -181,6 +191,7 @@
     </div>
     <div id="footerEvents">
         <h3>Events</h3>
+        <div class="space"></div>
         <ul>
             <li>Event1</li>
             <li>Event2</li>
@@ -189,8 +200,8 @@
         </ul>
     </div>
     </section>
-    <section id="termsServices">
-        <div>
+    <section id="footerCopy">
+        <div id="termsServices">
         <small><a href="#">Privacy Policy</a></small>
         <small><a href="#">Terms of Service</a></small>
         </div>

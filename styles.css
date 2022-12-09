@@ -70,9 +70,8 @@ h1, h2, h3, h4{
     font-weight: 700;
 }
 h1{
-    font-size: 2em;
-    margin: 1em 0;
-    display: inline;
+    visibility: hidden;
+    height: 0px;
 }
 h2{
     font-size: 4em;
@@ -137,15 +136,20 @@ footer {
     display:grid;
     grid-template-areas: 
     "footerHead"
-    "socialMedia"
     "contentLists"
-    "footerBooks"
-    "footerEvents"
-    "termsOfService"
-    "copyright";
+    "footerCopy";
 }
-
-
+#contentLists {
+    display: grid;
+    grid-template-areas: 
+    "footerBooks footerEvents";
+}
+.space {
+    padding-top: 5px;
+    width: 40px;
+    height: 2px;
+    color: white;
+}
 
 /* ----- IMAGES ----- */
 /*img{
@@ -214,11 +218,97 @@ small{
     margin: 0.25em;
     padding: 0.25em;
 }
+
+/*--------- Small Size Menu ---------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--teal);
+    padding: 12px 20px;
+}
+.titleName {
+    font-size: 2em;
+    text-decoration: none;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 900px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--teal);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+/*--------- End Small Size Menu ----------- */
+
 /* ---------- SMALL SCREEN STYLES ---------- */
 @media screen and (min-width: 320px) {
     header, footer{
     background-color: var(--teal);
     color: var(black);
+    }
+    .titleName {
+        font-size: 3em;
+        text-decoration: none;
     }
     #books {
         grid-template-areas:
@@ -252,6 +342,8 @@ small{
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 @media screen and (min-width: 900px) {
+    
+    
     h2{
         font-size: 3em;
         text-align: center;
@@ -259,19 +351,17 @@ small{
     #books {
         grid-template-areas:
         "one two"
-        "three four"
+        "three four";
     }
     #events {
         grid-template-areas:
         "five six"
-        "seven eight"
+        "seven eight";
     }
     footer {
         grid-template-areas:
-        "footerHead"
-        "contentLists"
-        "termsOfService"
-        "copyright";
+        "footerHead contentLists"
+        "copyright termsOfService";
     }
 
 }
@@ -290,6 +380,10 @@ small{
         grid-template-areas:
         "five six"
         "seven eight"
+    }
+    footer {
+        grid-template-areas:
+        "footerHead contentLists footerCopy";
     }
 }
 /* --------------- END LARGE SCREEN SIZES --------------- */
