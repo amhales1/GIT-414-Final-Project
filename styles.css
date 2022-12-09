@@ -1,2 +1,305 @@
 /* This is the StyleSheet for GIT 414 Final Project */
 /*Author: Alex Hales */
+
+/* --------------- ADD CSS RESET TO THE FILE HERE --------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- COLOR VARIABLES ---------- */
+:root{
+    --apple: #D74452;
+    --teal: #2D838D;
+    --beige: #DAD3B7;
+    --orange: #DB9F34;
+    --darkOrange: #DB8E36;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+h1{
+    font-size: 2em;
+    margin: 1em 0;
+    display: inline;
+}
+h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+/* ----- MAIN/HEADER/FOOTER ----- */
+main, header, footer{
+    font-family: sans-serif;
+    color: var(--black);
+    width: 100%;
+}
+main{
+    max-width: 100%;
+    margin: 0 auto;
+}
+#books {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "one"
+    "two" 
+    "three"
+    "four"
+    }
+    #one {
+    grid-area: one;
+    }
+    #two {
+    grid-area: two;
+    }
+    #three {
+    grid-area:three;
+    }
+    #four {
+    grid-area:four;
+    }
+#events {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "five"
+    "six" 
+    "seven"
+    "eight";
+    }
+    #five {
+    grid-area:five;
+    }
+    #six {
+    grid-area:six;
+    }
+    #seven {
+    grid-area:seven;
+    }
+    #eight {
+    grid-area:eight;
+    }
+footer {
+    display:grid;
+    grid-template-areas: 
+    "footerHead"
+    "socialMedia"
+    "contentLists"
+    "footerBooks"
+    "footerEvents"
+    "termsOfService"
+    "copyright";
+}
+
+
+
+/* ----- IMAGES ----- */
+/*img{
+    display: block;
+    max-width: 100%;
+    margin: 0.5em 0;
+}
+*/
+
+/* ----- Site Sectioning ----- */
+h2 ~ p {
+    text-align: center;
+}
+p {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1em;
+}
+#about {
+    height: 550px;
+    background-color:var(--teal);
+    padding-top: 250px;
+}
+#about ~ p {
+    font-weight: 700;
+}
+#bookSection {
+    height: 800px;
+    background-color:var(--apple);
+    text-align: center;
+    padding-top: 100px;
+}
+#books {
+    margin-top: 20px;
+    background-color:var(--apple);
+}
+#eventSection {
+    height: 800px;
+    background-color: var(--beige);
+    padding-top: 100px;
+}
+.standout {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+#events {
+    background-color: var(--beige);
+}
+#newsletterForm {
+    height: 400px;
+    background-color:var(--orange);
+    text-align: center;
+    padding-top: 100px;
+}
+footer {
+    padding-top: 50px;
+}
+
+#socialMedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+small{
+    font-size: 12px;
+    margin: 0.25em;
+    padding: 0.25em;
+}
+/* ---------- SMALL SCREEN STYLES ---------- */
+@media screen and (min-width: 320px) {
+    header, footer{
+    background-color: var(--teal);
+    color: var(black);
+    }
+    #books {
+        grid-template-areas:
+        "one"
+        "two" 
+        "three"
+        "four";
+    }
+    #events {
+        grid-template-areas:
+        "five"
+        "six" 
+        "seven"
+        "eight";
+    }
+    footer {
+        grid-template-areas:
+        "footerHead"
+        "socialMedia"
+        "contentLists"
+        "footerBooks footerEvents"
+        "termsOfService"
+        "copyright";
+    }
+    img{
+        width: 200px;
+        max-width: 200px;
+    } 
+}
+/* --------------- END SMALL SCREEN SIZES --------------- */
+
+/* ---------- MEDIUM SCREEN STYLES ---------- */
+@media screen and (min-width: 900px) {
+    h2{
+        font-size: 3em;
+        text-align: center;
+    }
+    #books {
+        grid-template-areas:
+        "one two"
+        "three four"
+    }
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight"
+    }
+    footer {
+        grid-template-areas:
+        "footerHead"
+        "contentLists"
+        "termsOfService"
+        "copyright";
+    }
+
+}
+/* --------------- END MEDIUM SCREEN SIZES --------------- */
+
+/* ---------- LARGE SCREEN STYLES ---------- */
+@media screen and (min-width: 1280px) {
+    h2{
+        font-size: 5em;
+    }
+    #books{
+        grid-template-areas:
+        "one two three four"
+      } 
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight"
+    }
+}
+/* --------------- END LARGE SCREEN SIZES --------------- */
+
+
+
+/* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
+/* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
+    img{
+        width: 300px;
+        max-width: 300px;
+    } 
+/* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */

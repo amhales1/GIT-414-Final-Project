@@ -1,30 +1,47 @@
-<!DOCTYPE>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Claire Sinagra | Children's Author</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <h1>Claire Sinagra</h1>
+            <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bookSection">Books</a></li>
+                <li><a href="#eventSection">Events</a></li>
+            </ul>
+            </nav>
+        </header>
+
         <main>
-        <h1>Claire Sinagra</h1>
-        <h2>About</h2>
-            <p>Claire lives in the Rocky Mountains with her husband, 
+        <section id="about">    
+            <h2>About</h2>
+            <p class="standout">Claire lives in the Rocky Mountains with her husband, 
             an exceptionally perfect dog, and an attack cat.</p>
-        <section>
-        <h2>Books</h2>
-            <p>Claire's books have received starred reviews in Publishers 
+        </section>
+        <section id="bookSection">
+            <h2>Books</h2>
+            <p class="standout">Claire's books have received starred reviews in Publishers 
             Weekly, Library Journal, and Booklist. She is a New York Times 
             and a USA Today bestseller and a RITA® winner.</p>
-            <section>
+            
+            <div id="books">
+            <section id="one">
             <h3>Silly Space</h3>
                 <p>The planets were circling the Sun, staring into space, until suddenly they 
                 spot something else in their Solar System. What could it be? Who could it be? The 
                 planets have no idea but they're circling to find out.</p>
                 <h4>2021</h4>
             </section>
-            <section>
+            <section id="two">
             <h3>Pretty Plants</h3>
                 <p>One tiny dandelion seed wants to hold onto its dandelion home, 
                 until the winter wind carries it away. The seed worries it won't be 
@@ -33,66 +50,155 @@
                 such a bad thing after all.</p>
                 <h4>2020</h4>
             </section>
-            <section>
+            <section id="three">
             <h3>Happy Hello</h3>
                 <p>Is it possible to find happiness in times of chaos and confusion? Yes! It is possible!Use 
                 these practices and techniques and find happiness each day. 
                 A workbook/activity book full of interactive fun!</p>
                 <h4>2019</h4>
             </section>
-            <section>
+            <section id="four">
             <h3>Freddy's Feelings</h3>
                 <p>How to teach kids about emotions and feelings? Like teaching them everything else
                 - using clear words, familiar situations, exciting pictures and a lot of hands-on 
                 activities (games, puzzles, coloring pages, etc.).</p>
                 <h4>2018</h4>
             </section>
+            </div>
         </section>
-        <section>
+        <section id="eventSection">
         <h2>Events</h2>
-            <p>Get an autographed book at Claire's bookstore 
+            <p class="standout">Get an autographed book at Claire's bookstore 
             events or hear her read her books at library events.</p>
-            <section>
-            San Diego
-            Saturday, January 8, 2022
-            11:00 AM -- 2:00 PM
-            Bob's Bookstore
-            123 Bob Street
-            San Diego, CA 89978
+            <div id="events">
+            <section id="five">
+            <h3>San Diego</h3>
+                <address>
+                    Saturday, January 8, 2022<br>
+                    11:00 AM -- 2:00 PM<br>
+                    Bob's Bookstore<br>
+                    123 Bob Street<br>
+                    San Diego, CA 89978
+                </address>
             </section>
-            <section>
-            Santa Clara
-            Saturday, January 15, 2022
-            1:00 -- 4:00 PM
-            Barnes & Noble
-            5678 Books Ave.
-            Santa Clara, CA 89813
+            <section id="six">
+            <h3>Santa Clara</h3>
+                <address>
+                    Saturday, January 15, 2022<br>
+                    1:00 -- 4:00 PM<br>
+                    Barnes & Noble<br>
+                    5678 Books Ave.<br>
+                    Santa Clara, CA 89813
+                </address>
             </section>
-            <section>
-            Santa Barbara
-            Saturday, January 21, 2022
-            9:00 -- 10:30 AM
-            Santa Barbara Library
-            286 Main Street
-            Santa Barbara, CA 89173
+            <section id="seven">
+            <h3>Santa Barbara</h3>
+                <address> 
+                    Saturday, January 21, 2022<br>
+                    9:00 -- 10:30 AM<br>
+                    Santa Barbara Library<br>
+                    286 Main Street<br>
+                    Santa Barbara, CA 89173
+                </address>
             </section>
-            <section>
-            San Francisco
-            Saturday, January 28, 2022
-            10:00 -- 11:30 AM
-            San Francisco Library
-            438 Groovy Blvd.
-            San Francisco, CA 81786
+            <section id="eight">
+            <h3>San Francisco</h3>
+                <address>    
+                    Saturday, January 28, 2022<br>
+                    10:00 -- 11:30 AM<br>
+                    San Francisco Library<br>
+                    438 Groovy Blvd.<br>
+                    San Francisco, CA 81786
+                </address>
             </section>
+        </div>
         </section>
-Newsletter Sign Up
-First name
-Last Name
-Email Address
+        <section id="newsletterForm">
+        <h2>Newsletter Sign Up</h2>
+            <form>
+                <label for="firstName">First Name<span class="required">*</span></label>
+                <input type="text" name="firstName" id="firstName" autocomplete="name" placeholder="Insert First Name" required>
+                <label for="lastName">Last Name<span class="required">*</span></label>
+                <input type="text" name="lastName" id="lastName" autocomplete="name" placeholder="Insert Last Name" required>
+                <label for="myEmail">Email<span class="required">*</span></label>
+                <input type="email" name="myEmail" id="myEmail" autocomplete="email" placeholder="Insert Email" required>
+                <input type="Submit" name="mySubmit" id="mySubmit">	
+            </form>
+    </section>
 </main>
 <footer>
-Claire Sinagra, Inc
-All books and events are copyright Claire Sinagra, Inc.
+    <section id="footerHead">
+        <h2> Sinagra Inc</h2>
+        <p class="standout">Stay up to date on all future book signing events and releases by following us on social media.</p>
+        
+        <div id="socialMedia">
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40" height="40" viewbox="0 0 24 24" stroke-width="1.5" stroke="#DB8E36" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+                <!-- Facebook -->
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewbox="0 0 24 24" stroke-width="1.5" stroke="#DB8E36" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg>
+                <!-- Twitter-->
+            </li>
+            <li> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewbox="0 0 24 24" stroke-width="1.5" stroke="#DB8E36" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <line x1="8" y1="11" x2="8" y2="16" />
+                <line x1="8" y1="8" x2="8" y2="8.01" />
+                <line x1="12" y1="16" x2="12" y2="11" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                  </svg>
+                <!-- Linked-In -->
+            </li>
+            <li> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="40" height="40" viewbox="0 0 24 24" stroke-width="1.5" stroke="#DB8E36" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="3" y="5" width="18" height="14" rx="4" />
+                <path d="M10 9l5 3l-5 3z" />
+                </svg>
+                <!-- YouTube -->
+            </li>            
+        </ul>
+        </div>
+    </section>
+    <section id="contentLists">
+    <div id="footerBooks">
+        <h3>Books</h3>
+        <ul>
+            <li>Book1</li>
+            <li>Book1</li>
+            <li>Book1</li>
+            <li>Book1</li>
+        </ul>
+    </div>
+    <div id="footerEvents">
+        <h3>Events</h3>
+        <ul>
+            <li>Event1</li>
+            <li>Event2</li>
+            <li>Event3</li>
+            <li>Event4</li>
+        </ul>
+    </div>
+    </section>
+    <section id="termsServices">
+        <div>
+        <small><a href="#">Privacy Policy</a></small>
+        <small><a href="#">Terms of Service</a></small>
+        </div>
+        <div id="copyright">  
+        <small>Copyright 2022 | Claire Sinagra, Inc</small>
+        <small>All books and events are copyright of Claire Sinagra, Inc.</small>
+        </div>
+    </section>
 </footer>
 </body>
 </html>
