@@ -64,7 +64,11 @@ table {
 /* ---------- GLOBAL STYLES ---------- */
 
 /* ----- HEADINGS ----- */
-h1, h2, h3, h4{
+h1 {
+    visibility: hidden;
+    height: 1px;
+}
+h2, h3, h4{
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
 }
@@ -76,14 +80,10 @@ main {
     margin: 0 auto;
     width: 80%;
     text-align: center;
-}
+} 
 nav h2 {
     visibility: hidden;
     height: 1px;
-}
-nav li {
-    text-decoration: none;
-    display: inline;
 }
 #books {
     max-width:1920px;
@@ -199,7 +199,6 @@ p {
 footer {
     padding-top: 50px;
 }
-
 #socialMedia {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -295,7 +294,7 @@ small{
 @media screen and (min-width: 320px) {
     header, footer{
     background-color: var(--teal);
-    color: var(black);
+    color: var(--black);
     }
     .titleName {
         font-size: 3em;
