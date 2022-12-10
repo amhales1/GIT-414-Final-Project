@@ -112,8 +112,10 @@ nav li {
     min-width:320px;
     display:grid;
     grid-template-areas:
-    "five six" 
-    "seven eight";
+    "five"
+    "six" 
+    "seven"
+    "eight";
     }
     #five {
     grid-area:five;
@@ -140,42 +142,249 @@ footer {
     "footerBooks footerEvents";
 }
 
+/* ----- IMAGES ----- */
+/*img{
+    display: block;
+    max-width: 100%;
+    margin: 0.5em 0;
+}
+*/
 
-/* -------- Site Section Styles -------- */
-/* ------ About Section -------- */
+/* ----- Site Sectioning ----- */
+h2 ~ p {
+    text-align: center;
+}
+p {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1em;
+}
+#about {
+    height: 550px;
+    background-color:var(--teal);
+    padding-top: 250px;
+}
+#about ~ p {
+    font-weight: 700;
+}
+#bookSection {
+    height: 800px;
+    background-color:var(--apple);
+    text-align: center;
+    padding-top: 100px;
+}
+#books {
+    margin-top: 20px;
+    background-color:var(--apple);
+}
+#eventSection {
+    height: 800px;
+    background-color: var(--beige);
+    padding-top: 100px;
+}
+.standout {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+#events {
+    background-color: var(--beige);
+}
+#newsletterForm {
+    height: 400px;
+    background-color:var(--orange);
+    text-align: center;
+    padding-top: 100px;
+}
+footer {
+    padding-top: 50px;
+}
 
-
-/* ------ Books Section -------- */
-
-
-
-/* ------ Events Section -------- */
-
-
-
-/* ------ Footer Section -------- */
-
+#socialMedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+small{
+    font-size: 12px;
+    margin: 0.25em;
+    padding: 0.25em;
+}
 
 /*--------- Small Size Menu ---------*/
-/* Start with the menu hidden */
-
-  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--teal);
+    padding: 12px 20px;
+}
+.titleName {
+    font-size: 2em;
+    text-decoration: none;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 900px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--teal);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
 /*--------- End Small Size Menu ----------- */
 
 /* ---------- SMALL SCREEN STYLES ---------- */
-/*@media screen and (min-width: 320px) {
-
+@media screen and (min-width: 320px) {
+    header, footer{
+    background-color: var(--teal);
+    color: var(black);
+    }
+    .titleName {
+        font-size: 3em;
+        text-decoration: none;
+    }
+    #books {
+        grid-template-areas:
+        "one"
+        "two" 
+        "three"
+        "four";
+    }
+    #events {
+        grid-template-areas:
+        "five"
+        "six" 
+        "seven"
+        "eight";
+    }
+    footer {
+        grid-template-areas:
+        "footerHead"
+        "socialMedia"
+        "contentLists"
+        "footerBooks footerEvents"
+        "termsOfService"
+        "copyright";
+    }
+    img{
+        width: 200px;
+        max-width: 200px;
+    } 
 }
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
-/*@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
+    
+    
+    h2{
+        font-size: 3em;
+        text-align: center;
+    }
+    #books {
+        grid-template-areas:
+        "one two"
+        "three four";
+    }
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight";
+    }
+    footer {
+        grid-template-areas:
+        "footerHead contentLists"
+        "copyright termsOfService";
+    }
 
 }
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
 /* ---------- LARGE SCREEN STYLES ---------- */
-/*@media screen and (min-width: 1280px) {
-
+@media screen and (min-width: 1280px) {
+    h2{
+        font-size: 5em;
+    }
+    #books{
+        grid-template-areas:
+        "one two three four"
+      } 
+    #events {
+        grid-template-areas:
+        "five six"
+        "seven eight"
+    }
+    footer {
+        grid-template-areas:
+        "footerHead contentLists footerCopy";
+    }
 }
 /* --------------- END LARGE SCREEN SIZES --------------- */
+
+
+
+/* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
+/* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
+    img{
+        width: 300px;
+        max-width: 300px;
+    } 
+/* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
