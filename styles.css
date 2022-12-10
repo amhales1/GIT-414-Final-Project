@@ -61,127 +61,121 @@ table {
     --black: #000000;
     --white: #ffffff;
 }
-
 /* ---------- GLOBAL STYLES ---------- */
 
 /* ----- HEADINGS ----- */
 h1, h2, h3, h4{
     font-family: 'Comfortaa', cursive;
-    font-weight: 700;
-}
-h1{
-    visibility: hidden;
-    height: 0px;
+    font-weight: bold;
 }
 h2{
     font-size: 4em;
+}
+/* ------ Main Styles ----- */
+main {
+    margin: 0 auto;
+    width: 80%;
     text-align: center;
 }
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+nav li {
+    text-decoration: none;
+    display: inline;
+}
+#books {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "one"
+    "two" 
+    "three"
+    "four"
+    }
+    #one {
+    grid-area: one;
+    }
+    #two {
+    grid-area: two;
+    }
+    #three {
+    grid-area:three;
+    }
+    #four {
+    grid-area:four;
+    }
+#events {
+    max-width:1920px;
+    min-width:320px;
+    display:grid;
+    grid-template-areas:
+    "five six" 
+    "seven eight";
+    }
+    #five {
+    grid-area:five;
+    }
+    #six {
+    grid-area:six;
+    }
+    #seven {
+    grid-area:seven;
+    }
+    #eight {
+    grid-area:eight;
+    }
+footer {
+    display:grid;
+    grid-template-areas: 
+    "footerHead"
+    "contentLists"
+    "footerCopy";
+}
+#contentLists {
+    display: grid;
+    grid-template-areas: 
+    "footerBooks footerEvents";
+}
 
-/* ----- MAIN/HEADER/FOOTER ----- */
+
+/* -------- Site Section Styles -------- */
+/* ------ About Section -------- */
 
 
-/* ----- IMAGES ----- */
+/* ------ Books Section -------- */
 
 
-/* ----- Site Sections ----- */
+
+/* ------ Events Section -------- */
+
+
+
+/* ------ Footer Section -------- */
 
 
 /*--------- Small Size Menu ---------*/
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    position: relative;
-    background-color: var(--teal);
-    padding: 12px 20px;
-}
-.titleName {
-    font-size: 2em;
-    text-decoration: none;
-}
-.menu {display: flex;}
-.menu li {padding-left: 30px;}
-.menu li a {
-    display: inline-block;
-    font-size: 2em;
-    text-decoration: none;
-    color: var(--black);
-    text-align: center;
-    transition: 0.15s ease-in-out;
-    position: relative;
-    text-transform: uppercase;
-}
-.menu li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--white);
-    transition: 0.15s ease-in-out;
-}
-.menu li a:hover:after {width: 100%;}
-.open-menu , .close-menu {
-    position: absolute;
-    color: var(--black);
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
-}
-.open-menu {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-.close-menu {
-    top: 20px;
-    right: 20px;
-}
-#check {display: none;}
-@media(max-width: 900px){
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        z-index: 100;
-        background-color: var(--white);
-        transition: all 0.2s ease-in-out;
-    }
-    .menu li {margin-top: 40px;}
-    .menu li a {padding: 10px;}
-    .open-menu , .close-menu {display: block;}
-    #check:checked ~ .menu {right: 0;}
-}
+/* Start with the menu hidden */
+
+  
 /*--------- End Small Size Menu ----------- */
 
 /* ---------- SMALL SCREEN STYLES ---------- */
-@media screen and (min-width: 320px) {
+/*@media screen and (min-width: 320px) {
 
 }
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
-@media screen and (min-width: 900px) {
+/*@media screen and (min-width: 900px) {
 
 }
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
 /* ---------- LARGE SCREEN STYLES ---------- */
-@media screen and (min-width: 1280px) {
+/*@media screen and (min-width: 1280px) {
 
 }
 /* --------------- END LARGE SCREEN SIZES --------------- */
